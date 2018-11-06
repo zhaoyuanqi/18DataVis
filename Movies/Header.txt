@@ -1,0 +1,27 @@
+####################################################################
+# Title: Advanced Option Scatterplot
+# Version: Scatter-plot 1.2.1 - ggvis (movie data)
+# Author: Zachary Segall, with help from Shonda Kuiper, Pamela Fellers
+# Date: 5/26/15
+# Description: An shiny application for taking data and making it 
+#   into an interactive scatterplot graph.
+# Branch Off:
+#   Scatter-plot 1.2.1 - ggvis (country data)
+#   Added Features include:
+#     -Added wellPanels to ui.R
+#     -Implemented ggvis based plot instead of ggplot2 based plot
+#     -Hovering over a datapoint shows the ID assigned in global.R
+#   Potential future developments:
+#     -Make the graph automatically adapt to user screen size
+# Files:
+#   -server.R: includes code that supports data processing for UI
+#   -ui.R: includes the code for the design of the UI
+#   -global.R: includes the Data to be used in scatter plot and
+#      UI specifications
+#   -helperFunctions.R: 
+#       -applyScale
+#       -cleanData
+#       -cleanCor
+# Added souces:
+#   -https://github.com/rstudio/shiny-examples/tree/master/051-movie-explorer
+####################################################################
