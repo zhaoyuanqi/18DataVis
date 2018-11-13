@@ -31,7 +31,7 @@ shinyUI(pageWithSidebar(
                             "Military Spending/GDP ($/$)" = CIAmilitaryColNames[8])),
     p("Select the Number of Observations to see more or less rows of data
       within the tables.",align = "center"),
-    numericInput("obs", (span("Number of observations to view:", style = "color:darkblue")), 3),
+    numericInput("obs", (span("Number of observations to view:", style = "color:darkblue")), 3, min=1),
     p("Additional resources for instructors:", align = "center"),
     a("Stats2Labs",
       href="http://web.grinnell.edu/individuals/kuipers/stat2labs/MilitarySpending.html", 
