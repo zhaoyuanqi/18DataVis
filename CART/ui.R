@@ -23,13 +23,18 @@ dashboardPage(
       convertMenuItem(menuItem("Try yourself",tabName = "yourself",icon=icon("dashboard"),
                                selectInput("dataset","choose a dataset",dataset),
                                hr(),
-                               sliderInput("xslider","X Slider",min=0,max=5,value=2),
+                               h4("X Slider"),
+                               sliderInput("xslider",NULL,min=0,max=5,value=2),
+                               h4("Y Slider(Left)"),
                                checkboxInput("left","Left Slider",value = FALSE),
-                               sliderInput("ysliderleft","Y Slider",min=0,max=5,value=2),
+                               sliderInput("ysliderleft",NULL,min=0,max=5,value=2),
+                               h4("Y Slider(Right)"),
                                checkboxInput("right","Right Slider",value=FALSE),
-                               sliderInput("ysliderright","Y slider",min=0,max=5,value=2),
-                               checkboxInput("display","Display Optimized Tree?",value=FALSE)),tabName="yourself"),
-      convertMenuItem(menuItem("Optimized Tree",tabName = "optimized",icon=icon("bar-chart-o")),tabName = "optimized")
+                               sliderInput("ysliderright",NULL,min=0,max=5,value=2),
+                               checkboxInput("display","Display Optimized Tree?",value=FALSE)
+                               ),tabName="yourself"),
+      convertMenuItem(menuItem("Optimized Tree",tabName = "optimized",icon=icon("bar-chart-o")
+                               ),tabName = "optimized")
     )
   ),
   dashboardBody(
@@ -40,21 +45,21 @@ dashboardPage(
                          status="primary",
                          title="Play around",
                          olidHeader = TRUE,
-                         collapsible = TRUE,
+                         #collapsible = TRUE,
                          plotOutput("distPlot", height = 300),
                          height = 350),
                      box(width=NULL,
                          status="primary",
                          title="Accuracy",
                          olidHeader = TRUE,
-                         collapsible = TRUE,
+                         #collapsible = TRUE,
                          verbatimTextOutput("accuracy"),
                          height = 100),
                      box(width=NULL,
                          status="primary",
                          title="Optimized Tree",
                          olidHeader = TRUE,
-                         collapsible = TRUE,
+                         #collapsible = TRUE,
                          plotOutput("sample", height = 200 ),
                          height = 250))),
       tabItem(tabName = "optimized",
@@ -70,5 +75,3 @@ dashboardPage(
     )
   )
 )
-
-
